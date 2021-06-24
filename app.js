@@ -1,18 +1,28 @@
 const form = document.querySelector('.quiz-form');
 
-const correctAnswers = ['B', 'B', 'B', 'B'];
+const correctAnswers = ['B', 'A', 'A', 'A', 'C', 'B'];
+const totalQuestions = correctAnswers.length;
 
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  let score = 0;
+  let userScore = 0;
   const userAnswers = [
-    form.inputQuestion1.value,
-    form.inputQuestion2.value,
-    form.inputQuestion3.value,
-    form.inputQuestion4.value,
+    form.firstQuestion.value,
+    form.secondQuestion.value,
+    form.thirdQuestion.value,
+    form.fourthQuestion.value,
+    form.fifthQuestion.value,
+    form.sixthQuestion.value,
   ];
 
-  console.log(userAnswers);
+  userAnswers.forEach((answer, index) => {
+    if (answer === correctAnswers[index]) {
+      const eachCorrectAnswer = Math.round((1 / totalQuestions) * 100);
+      userScore += eachCorrectAnswer;
+    }
+  })
+
+  console.log(userScore);
 });
