@@ -19,6 +19,7 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   let userScore = 0;
+
   const userAnswers = [
     form.firstQuestion.value,
     form.secondQuestion.value,
