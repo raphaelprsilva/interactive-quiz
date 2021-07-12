@@ -1,5 +1,6 @@
 const form = document.querySelector('.quiz-form');
 const submitButton = document.querySelector('.btn-primary');
+const finalResult = document.querySelector('.result');
 
 const correctAnswers = ['B', 'A', 'A', 'A', 'C', 'B'];
 const totalQuestions = correctAnswers.length;
@@ -31,10 +32,10 @@ form.addEventListener('submit', (event) => {
 
   const computeUserScore = (answer, index) => {
     if (answer === correctAnswers[index]) {
-      const eachCorrectAnswer = ((1 / totalQuestions) * 100);
+      const eachCorrectAnswer = (1 / totalQuestions) * 100;
       userScore += eachCorrectAnswer;
     }
-  }
+  };
 
   userAnswers.forEach(computeUserScore);
 
