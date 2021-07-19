@@ -2,7 +2,7 @@
 
 Este repositório contém os arquivos do projeto 'quiz interativo'.
 
-<!-- ![](https://media.giphy.com/media/57L44x9SeZenF9bcIm/giphy.gif) -->
+![Interactive quiz GIF](https://media.giphy.com/media/9Fe2FUHii4H1V93b8i/giphy.gif)
 
 > Aplicação web na qual, tem-se um quiz, onde a pessoa responde o mesmo e a nota é gerada.
 
